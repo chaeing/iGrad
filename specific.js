@@ -107,7 +107,7 @@ $('.bar-percentage[data-percentage]').each(function () {
         color: '#Ff0066',
         strokeWidth: 10,
         trailWidth: 10,
-        trailColor: '#ffffff',
+        trailColor: '#B4B4DC',
         duration: 1500,
 
         text: {
@@ -127,7 +127,7 @@ $('.bar-percentage[data-percentage]').each(function () {
     var base5=$('#b5').val();
 
     var circle5 = new ProgressBar.Circle('#compo5', { //노랑
-        color: 'yellow',
+        color: '#Ff0066',
         strokeWidth: 10,
         trailWidth: 10,
         trailColor: '#B4B4DC',
@@ -137,7 +137,7 @@ $('.bar-percentage[data-percentage]').each(function () {
             value: '0'
     },
     step: function(state, bar) {
-        bar.setText((bar.value() * base5).toFixed(0));
+        bar.setText((bar.value() * base4).toFixed(0)+"/"+base4);
     }
 
     });

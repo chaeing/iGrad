@@ -64,11 +64,12 @@ class membercraHisnetValidation {
     **/
   function requestHisnet() {
     include 'simple_html_dom.php';
-      // Create temorary file for save cookies
-    $ckfile = tempnam ("/tmp", "CURLCOOKIE");
 
     $connect = mysql_connect("localhost","root","111111") or die(mysql_error());   
     mysql_select_db("student");
+      // Create temorary file for save cookies
+    $ckfile = tempnam ("/tmp", "CURLCOOKIE");
+
     // POST data form for login
     $dataopost = array (
      "Language" => "Korean",
@@ -351,52 +352,10 @@ class membercraHisnetValidation {
 
           $query = "INSERT into stuinfo(id,first,second,curri,year,semester,code,name,credit,english,retake) values('$c_id','$c_first','$c_second','$c_curri','$c_inyear',0,'$c_code','$c_name','$c_credit','100%','&nbsp')";
           mysql_query($query,$connect);
-        }   
-                               
+        }            
       }
-
       mysql_close($connect);
-
-    // function parseResponse($result) {
-
-    //     include 'simple_html_dom.php';
-
-
-    //     $html = str_get_html($result);
-
-    //     $table = $html->find('.tblcationTitlecls', 1)->parent()->parent();
-    //     $td_id = $table->children(1)->children(1)->innertext;
-    //     $td_school = $table->children(4)->children(0)->innertext;
-
-    //     if(!strcmp($td_school,'대학원'))
-    //        $stu_id = substr($td_id, 0, 8);
-    //     else
-    //        $stu_id = substr($td_id, 11, 19);
-
-    //     $stu_name = $html->find('strong', 0)->innertext;
-    //   $chk_name = $html->find('.tblcationTitlecls',0)->parent()->children(1)->innertext;
-    //   $chk_name=trim($chk_name);
-
-    //     debugPrint('school:'.$td_school);
-    //     debugPrint('name:'.$stu_name.' and id:'.$stu_id);
-    //     debugPrint('this_name:'.$this->stu_name.' and this_id:'.$this->stu_id);
-
-    //     $this->is_login_successed =
-    //        (($stu_id==$this->stu_id) && ($this->stu_name==$stu_name));
-
-    //  }
-
-    //  function isLoginSuccess() {
-    //     return $this->is_login_successed;
-    //  }
-
   }
-
-   /**
-    * @function parseResponse
-    * @brief 요청 결과를 해석해서 사용자 정보를 클래스 프로퍼티에 넣는다
-    * @param HTTP response $res
-    */
 }
   
   require_once('firstmain.php');

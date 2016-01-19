@@ -112,10 +112,10 @@
     var base5=$('#b5').val();
 
     var circle5 = new ProgressBar.Circle('#compo5', { //노랑
-        color: '#4961ab',
+        color: 'transparent',
         strokeWidth: 10,
         trailWidth: 10,
-        trailColor: '#B4B4DC',
+        trailColor: 'transparent',
         duration: 1500,
 
         text: {
@@ -138,7 +138,7 @@
         color: 'white',
         strokeWidth: 0,
         trailWidth: 10,
-        trailColor: 'transparent',
+        trailColor: 'blue',
         duration: 1500,
 
         text: {

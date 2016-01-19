@@ -3,27 +3,6 @@
 <!-- 부트스트랩 -->
 <link href="/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
-<?php
-//장시간 미사용 로그인 해제 어떻게 할지.
-    session_start();
-/*
-if($_SESSION['is_logged'] ==0)
-{	?>
-	<script>
-		alert("아이디나 비밀번호를 확인해주세요.");
-		location.replace("pro_login.php");
-	</script>
-		<?php
-	exit;
-}
-
-*/
-?>
-
-
-
-
 <div class="row" id="alldisplay">
 
 	<div class="col-md-12" id="upper">

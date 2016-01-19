@@ -8,11 +8,7 @@
     $c_first=$_SESSION['major1']; // 1전공 겁색용 변수
     $c_second=$_SESSION['major2']; // 2전공 검색용 변수
     $c_curri=$_SESSION['curri']; // 교육과정 선택용 변수
-    $var=$_POST['section']; //전달 받은 선택 값
     $only_first_140=0;
-
-    $connect = mysql_connect("localhost","root","111111") or die(mysql_error());
-    mysql_select_db("student");
 
     $re="SELECT major.code,major.name,major.credit,major.english,major.section,major.detail
         FROM major
@@ -75,5 +71,4 @@
 
     $_SESSION['only_first_140']=$only_first_140;
 
-    mysql_close($connect);
 ?>

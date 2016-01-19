@@ -2,7 +2,7 @@
 
 <?php
 
-    session_start();
+    $c_id=$_SESSION['his_id']; // 현재 로그인 아이디
 
     $c_id=$_SESSION['his_id']; // 현재 로그인 아이디
     $c_first=$_SESSION['major1']; // 1전공 겁색용 변수
@@ -11,9 +11,6 @@
     $var=$_POST['section']; //전달 받은 선택 값
     $chinese_count=0;
     $chinese_count_pra=0;
-
-    $connect = mysql_connect("localhost","root","111111") or die(mysql_error());
-    mysql_select_db("student");
 
     $re="SELECT code,name,credit,english,section,detail
         FROM 140lib
@@ -44,7 +41,6 @@
                 continue;
             }
         }
-
         $_SESSION['lib_total']+=$result[2];
     }
 
@@ -71,7 +67,5 @@
 
         $_SESSION['lib_total']+=$result[2];    
     }
-
-    mysql_close($connect);
 
 ?>
