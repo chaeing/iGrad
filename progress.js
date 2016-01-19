@@ -74,3 +74,23 @@
 
 
   
+    var total=$('#total').val();
+    var base=$('#totalbase').val();
+
+    var circle4 = new ProgressBar.Circle('#example-percent-container4', { //노랑
+        color: '#black',
+        strokeWidth: 10,
+        trailWidth: 10,
+        trailColor: 'transparent',
+        duration: 1500,
+
+        text: {
+            value: '0'
+    },
+    step: function(state, bar) {
+        bar.setText((bar.value() * base).toFixed(0));
+    }
+
+    });
+    circle4.path.setAttribute('stroke-linecap', 'round');
+    circle4.animate(1/base*total);
