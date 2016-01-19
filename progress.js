@@ -1,28 +1,76 @@
+    var target1=$('#t1').val();
+    var base1=$('#b1').val();
+
+    var circle1_1 = new ProgressBar.Circle('#maincircle_1', { //노랑
+        color: '#cc0006',
+        strokeWidth: 9,
+        trailWidth: 9,
+        trailColor: '#B4B4DC',
+        duration: 1500,
+
+        text: {
+            value: '0'
+    },
+    step: function(state, bar) {
+        bar.setText((bar.value() * base1).toFixed(0)+"/"+base1);
+    }
+
+    });
+    circle1_1.path.setAttribute('stroke-linecap', 'round');
+    circle1_1.animate(1/base1*target1);
 
 
-$(document).ready(function() {
-  $(".animsition").animsition({
-    inClass: 'fade-in',
-    outClass: 'fade-out',
-    inDuration: 1500,
-    outDuration: 800,
-    linkElement: '.animsition-link',
-    // e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
-    loading: true,
-    loadingParentElement: 'body', //animsition wrapper element
-    loadingClass: 'animsition-loading',
-    loadingInner: '', // e.g '<img src="loading.svg" />'
-    timeout: false,
-    timeoutCountdown: 5000,
-    onLoadEvent: true,
-    browser: [ 'animation-duration', '-webkit-animation-duration'],
-    // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-    // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-    overlay : false,
-    overlayClass : 'animsition-overlay-slide',
-    overlayParentElement : 'body',
-    transition: function(url){ window.location.href = url; }
-  });
-});
 
 
+
+    var target2=$('#t2').val();
+    var base2=$('#b2').val();
+
+    var circle2_1 = new ProgressBar.Circle('#maincircle_2', { //노랑
+        color: '#Ff3366',
+        strokeWidth: 9,
+        trailWidth: 9,
+        trailColor: '#B4B4DC',
+        duration: 1500,
+
+        text: {
+            value: '0'
+    },
+    step: function(state, bar) {
+        bar.setText((bar.value() * base2).toFixed(0)+"/"+base2);
+    }
+
+    });
+    circle2_1.path.setAttribute('stroke-linecap', 'round');
+    circle2_1.animate(1/base2*target2);
+
+
+ 
+
+
+
+
+
+    var target3=$('#t3').val();
+    var base3=$('#b3').val();
+
+    var circle3_1 = new ProgressBar.Circle('#maincircle_3', { //노랑
+        color: '#Ff0066',
+        strokeWidth: 9,
+        trailWidth: 9,
+        trailColor: '#B4B4DC',
+        duration: 1500,
+
+        text: {
+            value: '0'
+    },
+    step: function(state, bar) {
+        bar.setText((bar.value() * base3).toFixed(0)+"/"+base3);
+    }
+
+    });
+    circle3_1.path.setAttribute('stroke-linecap', 'round');
+    circle3_1.animate(1/base3*target3);
+
+
+  
