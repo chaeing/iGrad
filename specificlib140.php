@@ -2,7 +2,7 @@
 
     <meta http-ｅquiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="stylesheet" type="text/css" href="specificlib.css">
+    <link rel="stylesheet" type="text/css" href="specificlib140.css">
     <!-- 부트스트랩 -->
     <link href="/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -132,6 +132,6 @@
 
     <script type="text/javascript" src="/library/progressbar.js-master/dist/progressbar.js">//circlebar </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script src="specificlib.js">//page transition </script> 
+    <script src="specificlib140.js">//page transition </script> 
 
 

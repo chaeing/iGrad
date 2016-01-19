@@ -2,7 +2,7 @@
 
     <meta http-ｅquiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <link rel="stylesheet" type="text/css" href="specificmajor140.css">
+    <link rel="stylesheet" type="text/css" href="specificprac140.css">
 	<!-- 부트스트랩 -->
 	<link href="/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -65,12 +65,12 @@
         <div class="progress1" id="bigcontainer" >
 
             <div class="box1" id="container1">
-                <div class="na" id="name1">전공</div>
+                <div class="na" id="name1">실무</div>
                 <div  id="compo1"  >  </div>
             </div>
 
              <div class="box1" id="container2">
-                <div class="nadef" id="name2">실무</div>
+                <div class="nadef" id="name2">.</div>
                 <div id="compo2">  </div>
             </div>
             
@@ -79,17 +79,17 @@
 
 
             <div class="box2" id="container3">
-                <div class="na" id="name3">전공1</div>
+                <div class="na" id="name3">전산</div>
                 <div id="compo3"  >  </div>
             </div>
             
             <div class="box2" id="container4">
-                <div class="na" id="name4">전공2</div>
+                <div class="na" id="name4">영어</div>
                 <div id="compo4"  >  </div>
             </div>
 
             <div class="box2" id="container5">
-                <div class="nadef" id="name5">기초학문</div>
+                <div class="na" id="name5">한문/중국어</div>
                 <div id="compo5"  >  </div>
             </div>
 
@@ -128,6 +128,6 @@
 
     <script type="text/javascript" src="/library/progressbar.js-master/dist/progressbar.js">//circlebar </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script src="specificmajor140.js">//page transition </script> 
+    <script src="specificprac140.js">//page transition </script> 
 
 

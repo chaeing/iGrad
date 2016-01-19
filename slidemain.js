@@ -3,7 +3,7 @@
 
 
             $.ajax({
-                    url : "specific.php",
+                    url : "specificlib140.php",
                     dataType : "html",
                     async : false,
                     type : "post",  // post 또는 get
@@ -16,6 +16,43 @@
                 });  
 
         });
+    $("#container2").on('click',function(){
+
+
+
+            $.ajax({
+                url : "specificprac140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#all").html(result);
+
+
+                } 
+            });  
+
+    });
+
+  $("#container3").on('click',function(){
+
+
+
+            $.ajax({
+                url : "specificmajor140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#all").html(result);
+
+
+                } 
+            });  
+
+    });
 
 
     var target1=$('#t1').val();
@@ -138,7 +175,7 @@
         color: 'white',
         strokeWidth: 0,
         trailWidth: 10,
-        trailColor: 'blue',
+        trailColor: 'transparent',
         duration: 1500,
 
         text: {

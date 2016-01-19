@@ -154,7 +154,9 @@
     font-weight: 500;
 }
 
-
+#aname5{
+  color : transparent;
+}
 #compo6 {
   position: absolute;
   overflow : hidden;
