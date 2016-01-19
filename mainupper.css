@@ -1,0 +1,84 @@
+
+@font-face{
+  font-family:"Gotham-thin";
+  src:url('/fonts/Gotham-thin.eot');
+  src:url('/fonts/Gotham-thin.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/Gotham-thin.woff') format('woff'),
+  url('/fonts/Gotham-thin.ttf') format('truetype');
+  src:local(※), url('/fonts/Gotham-thin.woff') format('woff');
+
+}
+
+
+.row{
+  margin: 0 !important;
+
+}
+#logobg{
+  padding : 1.2%;
+  height : 100%;
+  margin : 0;
+}
+
+#main_iconimg {  // 전체
+  overflow : hidden;
+  position : relative;
+
+  height : 100%;
+  width : auto;
+  display : block;
+  margin-right: auto;
+  margin-left: auto;
+
+  }
+
+
+
+
+.wrapper {
+  display: block;
+  position: relative;
+  display : inline-block;
+  -webkit-transform: translate(-50%,-50%);
+  padding : 0;
+
+
+}
+
+.wrapper a {
+  color: grey;
+  font-size:1em;
+  text-decoration: none !important;
+  display: inline-block;
+  position: absolute;
+  font-family: 'Gotham-thin', sans-serif;
+  font-size: 20px;
+}
+
+
+/*effect-underline*/
+a.effect-underline:after {
+  color: #6495ED;
+
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 3px solid;
+  margin-top: 10px;
+  opacity: 0;
+   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+   transition: opacity 0.35s, transform 0.35s;
+   -webkit-transform: scale(0,1);
+   transform: scale(0,1);
+}
+
+a.effect-underline:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+
+}
+
