@@ -352,7 +352,7 @@ class membercraHisnetValidation {
           $query = "INSERT into stuinfo(id,first,second,curri,year,semester,code,name,credit,english,retake) values('$c_id','$c_first','$c_second','$c_curri','$c_inyear',0,'$c_code','$c_name','$c_credit','100%','&nbsp')";
           mysql_query($query,$connect);
         }   
-                               
+        
       }
 
       mysql_close($connect);

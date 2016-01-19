@@ -1,0 +1,200 @@
+.back{
+  position :relative;
+  margin-top : 0%;
+
+  text-align : center;
+  overflow:hidden; 
+  height : 100%; 
+  padding : 0;
+
+} 
+
+
+.animsition{
+  position :relative;
+  background-color: 'transparent';
+  font-weight: 100;
+  margin-top : 80px;
+}
+
+
+.animsition_link{
+  position :relative;
+  background-color: 'transparent';
+
+
+}
+
+    
+#container1 {
+  position: relative;
+  display: inline-block;
+
+  margin-right: 40px;
+  overflow : hidden;
+  width : 275px;
+  height : 350px; 
+  -webkit-transition: width 0.5s;
+  -webkit-transition: font-size 0.5s;
+  transitioin: width 0.5s;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+#container1_name{
+  position : relative;
+  font-size: 30px;
+  color : white;
+  font-family: 'NanumBarunGothicLight';
+
+}
+
+#container1:hover{
+    width: 275px;
+    font-size : 50px;
+    font-weight: 800;
+}
+
+
+#example-percent-container1_1 {
+  position: absolute;
+  margin: 0px 0px;
+  overflow : hidden;
+  font-family:'Gotham-thin';
+  margin-bottom : 25px;
+}
+
+
+
+
+    
+#container2 {
+  position: relative;
+  display: inline-block;
+  
+  margin-right: 40px;
+  overflow : hidden;
+  width : 275px;
+  height : 350px; 
+  -webkit-transition: width 1s;
+  -webkit-transition: font-size 0.5s;
+  transitioin: width 0.5s;
+  cursor: pointer;
+  font-size: 40px;
+
+}
+#container2_name{
+  position : relative;
+  font-size: 30px;
+  color : white;
+  font-family: 'NanumBarunGothicLight';
+
+}
+
+#container2:hover{
+    width: 275px;
+    font-size : 50px;
+    font-weight: 800;
+
+}
+
+
+#example-percent-container2_1 {
+  position: absolute;
+  margin: 0px 0px;
+  overflow : hidden;
+  font-family:'Gotham-thin';
+  margin-bottom : 25px;
+}
+
+
+
+
+
+    
+#container3 {
+  position: relative;
+  display: inline-block;
+  margin-right: 0px;
+
+  overflow : hidden;
+  width : 275px;
+  height : 350px; 
+  -webkit-transition: width 0.5s;
+  -webkit-transition: font-size 0.5s;
+  transitioin: width 0.5s;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+#container3_name{
+  position : relative;
+  font-size: 30px;
+  color : white;
+  font-family: 'NanumBarunGothicLight';
+
+}
+
+
+
+#container3:hover{
+    width: 275px;
+    font-size : 50px;
+    font-weight: 800;
+}
+
+
+#example-percent-container3_1 {
+  position: absolute;
+  margin: 0px 0px;
+  overflow : hidden;
+  font-family:'Gotham-thin';
+  margin-bottom : 25px;
+
+}
+
+    
+#container4 {
+  position: relative;
+  display: inline-block;
+  
+  overflow : hidden;
+  width : 450px;
+  height : 350px; 
+  -webkit-transition: width 0.5s;
+  -webkit-transition: font-size 0.5s;
+  transitioin: width 0.5s;
+  cursor: pointer;
+  font-size: 250px;
+
+}
+
+#container4_name{
+  position : relative;
+  font-size: 30px;
+  color : white;
+  font-weight: 800;
+  top : 60px;
+  left : 10px;
+  font-family:'Gotham-thin';
+  letter-spacing: 5px;
+
+}
+
+#container4:hover{
+    width: 450px;
+    font-size : 270px;
+    font-weight: 500;
+}
+
+
+#example-percent-container4 {
+  position: absolute;
+  margin : 0px;
+  overflow : hidden;
+  width : 450px;
+  height : 230px;
+  letter-spacing: -15px;
+  top : 10px;
+  font-family:'Gotham-thin';
+}
