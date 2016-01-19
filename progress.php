@@ -1,16 +1,78 @@
-
-    <meta http-ｅquiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="progress.css">
     
  
     <?php 
-        $target1=5;
-        $target2=5;
-        $target3=5;
-        $base1=15;
-        $base2=25;
-        $base3=35;
+        session_start();
+
+        function chinese_check()
+        {
+            $chinese_re="SELECT EXISTS
+              (SELECT * FROM stuinfo
+              WHERE stuinfo.id='$c_id'
+              AND stuinfo.name='한문')";
+
+            $result_chinese_re=mysql_query($chinese_re,$connect);
+
+            if($result_chinese_re==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        function c_program_check()
+        {
+            $comp_re="SELECT EXISTS
+                (SELECT * FROM stuinfo
+                WHERE stuinfo.id='$c_id'
+                AND stuinfo.name='C 프로그래밍')";
+
+            $result_comp_re=mysql_query($comp_re,$connect);
+
+            if($result_comp_re==1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }    
+        }
+
+        function comp_major_check($c_first,$c_second)
+        {
+            if($c_first=='컴퓨터공학' || $c_second=='컴퓨터공학')
+            {
+                return true;
+            }
+            else if($c_first=='전자공학' || $c_second=='전자공학')
+                return true;
+            else if($c_first=='Information Technology' || $c_second=='Information Technology')
+                return true;
+            else
+            {
+                return false;
+            }
+        }
+
+        require_once('140_lib_total_score.php');
+        require_once('140_prac_total_score.php');
+        require_once('140_maj_total_score.php');
+
+        $target1=$_SESSION['lib_total'];
+
+        $target2=$_SESSION['prac_total'];
+
+        $target3=$_SESSION['maj_total'];
+
+        $base1=40;
+        $base2=20;
+        $base3=66;
      ?>
 
 
@@ -34,13 +96,13 @@
 
         <div class="progress2" id="container2" >  
             <div class="a" id="maincircle_2"  >  </div>
-            <div id="container1_name">전공</div>
+            <div id="container1_name">실무</div>
 
         </div>
 
         <div class="progress3" id="container3" >  
             <div class="a" id="maincircle_3"  >  </div>
-            <div id="container1_name">교양</div>
+            <div id="container1_name">전공</div>
         </div>
 
     

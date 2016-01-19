@@ -6,8 +6,7 @@
 
 <?php
 //장시간 미사용 로그인 해제 어떻게 할지.
-session_start();
-
+    session_start();
 /*
 if($_SESSION['is_logged'] ==0)
 {	?>

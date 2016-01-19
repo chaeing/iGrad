@@ -352,7 +352,7 @@ class membercraHisnetValidation {
           $query = "INSERT into stuinfo(id,first,second,curri,year,semester,code,name,credit,english,retake) values('$c_id','$c_first','$c_second','$c_curri','$c_inyear',0,'$c_code','$c_name','$c_credit','100%','&nbsp')";
           mysql_query($query,$connect);
         }   
-        
+                               
       }
 
       mysql_close($connect);
@@ -399,118 +399,6 @@ class membercraHisnetValidation {
     */
 }
   
-    if(($_SESSION['major1']=='컴퓨터공학심화') && ($_SESSION['curri']==1))
-    {
-        echo <<<eot
-
-        <A HREF="selection2.php?choice=0">130학점으로 보기</A>
-
-        <form method="POST" action="firstmain3.php">
-        <input type="hidden" name="section" value="1">
-        <input type="submit" value="교양">  
-        </form>
-
-        <form method="POST" action="firstmain3.php">
-        <input type="hidden" name="section" value="2">
-        <input type="submit" value="실무">  
-        </form>
-
-        <form method="POST" action="firstmain3.php">
-        <input type="hidden" name="section" value="3">
-        <input type="submit" value="전공">
-        </form>
-
-        <form method="POST" action="firstmain3.php">
-        <input type="hidden" name="section" value="9">
-        <input type="submit" value="영어">
-        </form>
-
-        <form method="POST" action="firstmain3.php">
-        <input type="hidden" name="section" value="12">
-        <input type="submit" value="공학인증">
-        </form>
-eot;
-    }
-    
-  if(($_SESSION['major1']=='컴퓨터공학심화') && ($_SESSION['curri']==0)) // 130학점인 경우
-  {
-    echo <<<eot
-
-        <A HREF="selection2.php?choice=1">140학점으로 보기</A>
-
-        <form method="POST" action="firstmain4.php">
-        <input type="hidden" name="section" value="1">
-        <input type="submit" value="교양">  
-        </form>
-
-        <form method="POST" action="firstmain4.php">
-        <input type="hidden" name="section" value="2">
-        <input type="submit" value="전공">
-        </form>
-
-        <form method="POST" action="firstmain4.php">
-        <input type="hidden" name="section" value="3">
-        <input type="submit" value="영어">
-        </form>
-
-        <form method="POST" action="firstmain4.php">
-        <input type="hidden" name="section" value="9">
-        <input type="submit" value="공학인증">
-        </form>
-eot;
-  }
-
-    if(($_SESSION['major1']!='컴퓨터공학심화') && ($_SESSION['curri']==1))
-    {
-        echo <<<eot
-
-        <A HREF="selection.php?choice=0">130학점으로 보기</A>
-
-        <form method="POST" action="firstmain.php">
-        <input type="hidden" name="section" value="1">
-        <input type="submit" value="교양">  
-        </form>
-
-        <form method="POST" action="firstmain.php">
-        <input type="hidden" name="section" value="2">
-        <input type="submit" value="실무">  
-        </form>
-
-        <form method="POST" action="firstmain.php">
-        <input type="hidden" name="section" value="3">
-        <input type="submit" value="전공">
-        </form>
-
-        <form method="POST" action="firstmain.php">
-        <input type="hidden" name="section" value="12">
-        <input type="submit" value="영어">
-        </form>
-
-eot;
-    }
-
-  if(($_SESSION['major1']!='컴퓨터공학심화') && ($_SESSION['curri']==0)) // 130학점인 경우
-  {
-    echo <<<eot
-
-        <A HREF="selection.php?choice=1">140학점으로 보기</A>
-
-        <form method="POST" action="firstmain2.php">
-        <input type="hidden" name="section" value="1">
-        <input type="submit" value="교양">  
-        </form>
-
-        <form method="POST" action="firstmain2.php">
-        <input type="hidden" name="section" value="2">
-        <input type="submit" value="전공">
-        </form>
-
-        <form method="POST" action="firstmain2.php">
-        <input type="hidden" name="section" value="3">
-        <input type="submit" value="영어">
-        </form>
-
-eot;
-  }
+  require_once('firstmain.php');
 
 ?>
