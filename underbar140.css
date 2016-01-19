@@ -1,0 +1,68 @@
+
+@font-face{
+  font-family:"NanumBarunGothicUltraLight";
+  src:url('/fonts/NanumBarunGothicUltraLight.eot');
+  src:url('/fonts/NanumBarunGothicUltraLight.eot?#iefix') format('embedded-opentype'),
+  url('/fonts/NanumBarunGothicUltraLight.woff') format('woff'),
+  url('/fonts/NanumBarunGothicUltraLight.ttf') format('truetype');
+  src:local(※), url('/fonts/NanumBarunGothicUltraLight.woff') format('woff');
+}
+
+
+
+.backunderbar{
+	padding : 0;
+	margin : 0;
+	display : inline-block;
+	height : 100px;
+	width : 100%;
+}
+
+
+#subone{
+	position : relative;
+	display : inline-block;
+	margin : 0;
+
+}
+#sub{
+	position : relative;
+	display : inline-block ;
+	height : 100px;
+	width : 100px;
+}
+.english{
+	position : relative;
+	display : inline-block;
+	margin : 0;
+}
+.reading{
+	position : relative;
+	display : inline-block;
+	margin : 0;
+}
+
+.sub_name{
+	position : absolute;
+	display : inline-block;
+	top : 45%;
+	font-family:'NanumBarunGothicUltraLight';
+	color : white;
+}
+.reading img{
+	display : inline-block;
+	position : relative;
+	height : 100px;
+	width : 100px;
+	margin-left : 30rem;
+	bottom : 45px;
+}
+
+.english img{
+	display : inline-block;
+	position : relative;
+	height : 100px;
+	width : 100px;
+	margin-left : 30rem;
+	bottom : 45px;
+}
