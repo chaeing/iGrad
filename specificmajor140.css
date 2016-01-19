@@ -1,0 +1,198 @@
+.back{
+    position :relative;
+    margin-top : 0.5%;
+    margin-left: 0%;
+    margin-right: 0%;
+    top:0;
+    overflow:hidden; 
+    height : 100%;
+    width : 100%;
+} 
+
+.animsition{
+    position :relative;
+    background-color: 'transparent';
+
+}
+
+.animsition_link{
+    position :relative;
+    background-color: 'transparent';
+}
+#secret{
+    width : 0%;
+    height : 0%;
+    position : absolute;
+    display : inline;
+}
+
+#bigcontainer {
+    position: relative;
+    display: inline-block;
+    overflow : hidden;
+    cursor: pointer;
+    font-size: 15px;
+    width :100%;
+    height : 100%;
+    text-align: center;
+
+}
+
+.box1{
+    width :150px;
+    height : 185px;
+    position : relative;
+    display : inline-block;
+    margin-top: 5%;
+}
+
+.box2{
+    width :100px;
+    height : 135px;
+    position : relative;
+    display : inline-block;
+    margin-top: 5%;
+}
+
+.na{
+    text-align: center;
+    margin-bottom: 9%;
+    color : white;
+}
+.nadef{
+    text-align: center;
+    margin-bottom: 9%;
+    color : transparent;
+}
+
+#container1{
+    margin-right : 8%;
+}
+#container2{
+    margin-left : 8%;
+}
+#container3{
+    margin-right : 2.5%;
+    margin-left : 5%;
+}
+#container4{
+    margin-left : 2.5%;
+    margin-right : 2.5%;
+}
+#container5{
+    margin-left : 2.5%;
+}
+#container6{
+    margin-left : 2%;
+}
+
+#compo1 {
+    position: relative !important;
+    overflow : hidden;
+    width : 150px;
+    height : 160px; 
+    -webkit-transition: width 0.5s;
+    -webkit-transition: font-size 0.5s;
+    transitioin: width 0.5s;
+    float : left;
+    text-align: center;
+}
+
+
+#compo1:hover{
+    width: 150px;
+    font-size : 20px;
+    font-weight: 500;
+}
+
+#compo2 {
+    position: relative;
+    overflow : hidden;
+    width : 150px;
+    height : 150px; 
+    -webkit-transition: width 0.5s;
+    -webkit-transition: font-size 0.5s;
+    transitioin: width 0.5s;
+    right : 1;
+    top : 1;
+    float : right;
+}
+
+#compo2:hover{
+    width: 151px;
+    font-size : 20px;
+    font-weight: 500;
+}
+
+#compo3 {
+    position: relative;
+    overflow : hidden;
+    width : 100px;
+    height : 100px; 
+    -webkit-transition: width 0.5s;
+    -webkit-transition: font-size 0.5s;
+    transitioin: width 0.5s;
+    float : left;
+}
+#compo3:hover{
+    width: 101px;
+    font-size : 20px;
+    font-weight: 500;
+}
+
+#compo4 {
+    position: relative;
+    overflow : hidden;
+    width : 100px;
+    height : 100px; 
+    -webkit-transition: width 0.5s;
+    -webkit-transition: font-size 0.5s;
+    transitioin: width 0.5s;
+    float : right;
+}
+#compo4:hover{
+    width: 101px;
+    font-size : 20px;
+    font-weight: 500;
+}
+
+#compo5 {
+    position: relative;
+    overflow : hidden;
+    width : 100px;
+    height : 100px; 
+    -webkit-transition: width 0.5s;
+    -webkit-transition: font-size 0.5s;
+    transitioin: width 0.5s;
+    float : left;
+}
+#compo5:hover{
+    width: 101px;
+    font-size : 20px;
+    font-weight: 500;
+}
+
+
+#compo6 {
+    position: absolute;
+    overflow : hidden;
+    width : 150px;
+    height : 150px; 
+    font-size: 50px;
+    -webkit-transition: width 0.5s;
+    -webkit-transition: font-size 0.5s;
+    transitioin: width 0.5s;
+    float : right;
+}
+#compo6:hover{
+    width: 151px;
+    font-size : 60px;
+    font-weight: 500;
+}
+
+.box3{
+    padding-left: 23% ;
+    padding-right:23%;
+        color : 'transparent';
+
+}
