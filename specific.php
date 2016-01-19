@@ -1,6 +1,6 @@
 
 
-    <meta http-ｅquiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="specific.css">
 	<!-- 부트스트랩 -->
@@ -9,18 +9,26 @@
     
  
     <?php 
-        $target1=10;
-        $target2=15;
-        $target3=20;
-        $target4=10;
-        $target5=15;
 
-        $base1=24;
-        $base2=36;
-        $base3=45;
-        $base4=24;
-        $base5=36;
-     ?>
+        session_start();
+
+        require_once('140_lib_religion_score.php');
+        require_once('140_lib_char_score.php');
+        require_once('140_lib_basic_score.php');
+
+        $target1=$_SESSION['lib_total'];
+        $target2=$_SESSION['lib_total'];
+        $target3=$_SESSION['lib_religion'];
+        $target4=$_SESSION['lib_char'];
+        $target5=$_SESSION['lib_basic'];
+
+        $base1=40;
+        $base2=40;
+        $base3=9;
+        $base4=10;
+        $base5=9;
+
+    ?>
 
 
 
@@ -48,7 +56,7 @@
             </div>
 
              <div class="box1" id="container2">
-                <div class="nadef" id="name2">실무</div>
+                <div class="nadef" id="name2">교양</div>
                 <div id="compo2">  </div>
             </div>
             
@@ -57,17 +65,17 @@
 
 
             <div class="box2" id="container3">
-                <div class="na" id="name3">전공</div>
+                <div class="na" id="name3">신앙 및 세계관</div>
                 <div id="compo3"  >  </div>
             </div>
             
             <div class="box2" id="container4">
-                <div class="na" id="name4">영어</div>
+                <div class="na" id="name4">인성 및 리더십</div>
                 <div id="compo4"  >  </div>
             </div>
 
             <div class="box2" id="container5">
-                <div class="na" id="name5">공학인증교양</div>
+                <div class="na" id="name5">기초학문</div>
                 <div id="compo5"  >  </div>
             </div>
 

@@ -6,7 +6,26 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300' rel='stylesheet' type='text/css'> 
  
     <?php 
-        $total=50;
+
+        $c_id=$_SESSION['his_id'];
+        $_SESSION['total']=0;
+
+        $connect = mysql_connect("localhost","root","111111") or die(mysql_error());
+        mysql_select_db("student");
+
+        $re="SELECT credit FROM stuinfo
+            WHERE stuinfo.id='$c_id'
+            AND stuinfo.retake!='재이수'
+            GROUP BY stuinfo.name";
+
+        $new_re=mysql_query($re,$connect);
+            
+        while($result=mysql_fetch_array($new_re))
+        {
+            $_SESSION['total']+=$result[0];
+        }
+
+        $total=$_SESSION['total'];
         $totalbase=140;
      ?>
 

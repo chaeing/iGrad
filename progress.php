@@ -3,8 +3,12 @@
     <link rel="stylesheet" type="text/css" href="progress.css">
     
  
-    <?php 
+    <?php
+
         session_start();
+
+        $connect = mysql_connect("localhost","root","111111") or die(mysql_error());   
+        mysql_select_db("student");
 
         function chinese_check()
         {
@@ -73,6 +77,8 @@
         $base1=40;
         $base2=20;
         $base3=66;
+
+        mysql_close($connect);
      ?>
 
 
