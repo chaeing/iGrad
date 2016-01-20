@@ -54,6 +54,41 @@
 
     });
 
+    $("#container4").on('click',function(){
+
+
+            $.ajax({
+                url : "secondpg_slide_eng_140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#all").html(result);
+
+                } 
+            });  
+
+    });
+
+
+    $("#container6").on('click',function(){
+
+
+            $.ajax({
+                url : "secondpg_tab_taken.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#alloflist").html(result);
+
+                } 
+            });  
+
+    });
+
 
     var target1=$('#t1').val();
     var base1=$('#b1').val();

@@ -37,12 +37,6 @@ $("#taken").on('click',function(){
 
 
 
-
-
-
-
-
-
     });
 
 
@@ -67,7 +61,7 @@ $("#basket").on('click',function(){
 
 
 
-$(".search-form").on('click',function(){
+$(".search-field").on('click',function(){
 
 
 

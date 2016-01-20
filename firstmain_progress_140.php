@@ -25,28 +25,29 @@
     
     
   <div class="animsition" data-animsition-in-class="fade-in-left" data-animsition-in-duration="2000" data-animsition-out-class="fade-out-left" data-animsition-out-duration="2000">
- 
-        <div class="progress1" id="container1" >  
-            <div class="a" id="maincircle_1"  ></div>
-            <div id="container1_name">교양</div>
-    	</div>
+        
+        <a href="./secondpg_main_lib_140.php" >
+            <div class="progress1" id="container1" >  
+                <div class="a" id="maincircle_1"  ></div>
+                <div id="container1_name">교양</div>
+        	</div>
+        </a>
 
-    <a href="./secondpg_140.php" class="animsition-link">
-        <div class="progress2" id="container2" >  
-            <div class="a" id="maincircle_2"  >  </div>
-            <div id="container1_name">실무</div>
+        <a href="./secondpg_main_prac_140.php" >
 
-        </div>
-    </a>
-    
-    <a href="./secondpg_140.php" class="animsition-link">
+            <div class="progress2" id="container2" >  
+                <div class="a" id="maincircle_2"  >  </div>
+                <div id="container1_name">실무</div>
+            </div>
+        </a>
 
-        <div class="progress3" id="container3" >  
-            <div class="a" id="maincircle_3"  >  </div>
-            <div id="container1_name">교양</div>
-        </div>
-    </a>
+        <a href="./secondpg_main_major_140.php" >
 
+            <div class="progress3" id="container3" >  
+                <div class="a" id="maincircle_3"  >  </div>
+                <div id="container1_name">전공</div>
+            </div>
+         </a>
     
         </div>
      

@@ -16,18 +16,16 @@
     <input type="hidden" id="total" value="<?=$total?>" />
     <input type="hidden" id="totalbase" value="<?=$totalbase?>" />
 
-  <div class="animsition" data-animsition-in-class="fade-in-left" data-animsition-in-duration="2000" data-animsition-out-class="fade-out-left" data-animsition-out-duration="2000">
+    <div class="animsition" data-animsition-in-class="fade-in-left" data-animsition-in-duration="2000" data-animsition-out-class="fade-out-left" data-animsition-out-duration="2000">
  
-    <a href="./secondpg.php" class="animsition-link">
-
-         <div class="progress4" id="container4" >  
-            <div class="b" id="example-percent-container4"  >  </div>
-        <div id="container4_name">Out of 140</div>
-    
-        </div>
-    </a>
-     
-  </div>
+        <a href="./secondpg_140.php" >
+             <div class="progress4" id="container4" >  
+                <div class="b" id="example-percent-container4"  >  </div>
+                <div id="container4_name">Out of 140</div>
+            </div>
+        </a>
+         
+    </div>
 
 </div>
 

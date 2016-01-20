@@ -1,41 +1,4 @@
 
-$("#container1").on('click',function(){
-
-
-
-        $.ajax({
-                url : "secondpage.php",
-                dataType : "html",
-                async : false,
-                type : "post",  // post 또는 get
-                success : function(result){
-
-                $("html").html(result);
-
-
-                } 
-            });  
-
-
-
-
-             $.ajax({
-                url : "specificlib140.php",
-                dataType : "html",
-                async : false,
-                type : "post",  // post 또는 get
-                success : function(result){
-
-                $(".sixcircle").html(result);
-
-
-                } 
-            });  
-
-    });
-
-
-
 
     var target1=$('#t1').val();
     var base1=$('#b1').val();

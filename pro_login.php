@@ -22,39 +22,42 @@
 
 
     <body>
-      
-
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 bg">
 
-                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 leftside">
-                    <div class="mention1">
-                        iGrad
-                    </div>
+                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 leftside">                           
+                    <div id="lv_align">                  
 
-                    <div class="mention2">
-                        안녕하세요, 저희 iGrad는 학부생들이  현재까지 이수한 과목에 대한 영역별 확인과<br/>
-                        졸업 요건 충족을 위해 앞으로 이수 해야 할 과목을 제시하는  서비스를 제공하고 있습니다.
-                    </div>
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 mention1">
+                            iGrad
+                        </div>
 
-                    <div class="circle">
-                        <div class="circle1">간단한</div> 
-                        <div class="circle2">소개</div>
-                        <div class="circle3">글</div>
-                    </div>
-                </div>
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 mention2">
+                            저희 iGrad는 학부생들이 현재까지 이수한 과목에 대한 영역별 확인과<br>
+                            졸업 요건 충족을 위해 앞으로 이수해야 할 과목을 제시하는<br>서비스를 제공하고 있습니다.
+                        </div>
 
-
-
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 rightside">
-                    <div class="col-xs-12 col-sm-4 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 mainimage">
-                        <img src="/img/igrad.png">
-                    </div>
-
-                    <div class="col-xs-12 col-sm-4 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 loginfield">
-                        <?php include "login_right.php" ?>
+                        <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 circle">
+                            <div class="circle1">간단한</div> 
+                            <div class="circle2">소개</div>
+                            <div class="circle3">글</div>
+                        </div>
                     </div>
                 </div>
+   
+
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 rightside">   
+                    <div class="row" id="v_align">                  
+                        <div class="col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 mainimage">
+                            <img src="/img/igrad.png">
+                        </div>
+
+                        <div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+                            <?php include "login_right.php" ?>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
 

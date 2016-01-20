@@ -20,6 +20,8 @@ $_SESSION['curri']=null;      //default   0 : 130학점
 $_SESSION['his_id']=null;
 $_SESSION['his_pw']=null;
 $_SESSION['address']=null;
+$_SESSION['english']=0;     //SESSION['english'] 1 제출, 0 미제출
+
 
 $a = new membercraHisnetValidation();
 $a->validation($_POST['his_id'],$_POST['his_pw']);
@@ -192,10 +194,31 @@ class membercraHisnetValidation {
 
 
 
-      $ch = curl_init ("http://hisnet.handong.edu/haksa/lecture/HLEC110M.php");
+      $ch = curl_init ("http://hisnet.handong.edu/haksa/graduate/HGRA130M.php");
       curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
       curl_setopt ($ch, CURLOPT_COOKIEFILE, $ckfile);
       curl_setopt ($ch, CURLOPT_REFERER, "http://hisnet.handong.edu/haksa/hakjuk/HHAK110M.php");
+      $result = curl_exec ($ch);
+
+      $result = iconv("EUC-KR","UTF-8", $result);
+
+      $html=str_get_html($result);
+
+
+      if(is_object($html->find('table[id=att_list]',0)->children(1)))
+      {
+        $_SESSION['english']=1;     //SESSION['english'] 1 제출, 0 미제출
+      }
+
+      echo $_SESSION['english'];
+
+
+
+
+      $ch = curl_init ("http://hisnet.handong.edu/haksa/lecture/HLEC110M.php");
+      curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
+      curl_setopt ($ch, CURLOPT_COOKIEFILE, $ckfile);
+      curl_setopt ($ch, CURLOPT_REFERER, "http://hisnet.handong.edu/haksa/graduate/HGRA130M.php");
       $result = curl_exec ($ch);
 
       // Delete temp file after using

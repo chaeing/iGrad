@@ -9,8 +9,6 @@
     <div class="login-wrap">
         <div class="login-html">
           <div class="login-form">
-            <div class="sign-in-htm">
-
               <div class="group">
                 <input id="user" type="text" class="input" name="his_id" placeholder="Hisnet ID">
               </div>
@@ -28,9 +26,7 @@
               <div class="group">
                 <input type="submit" class="button" value="Login">
               </div>
-
-
-            </div>
+              
           </div>
         </div>
     </div>

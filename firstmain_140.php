@@ -50,15 +50,18 @@ if($_SESSION['is_logged'] ==0)
                 </div>
             </div>
 
-        <div class="col-md-12" id="underbar">
-            <?php include "firstmain_underbar_140.php" ?>
-        </div>
-       
+            <div class="col-md-12" id="underbar">
+                <?php include "firstmain_underbar_140.php" ?>
+            </div>
+           
 
 
-        </div>
+        </div>  
+        <!-- center -->
     </div>
+    <!-- mainframe -->
 </div>
+<!-- alldisplay -->
 
 
 

@@ -1,3 +1,12 @@
+html{
+
+}
+@media (max-width:767px){html {font-size:30%;}}
+@media (min-width:768px) and (max-width:995px){html {font-size: 40%;}}
+@media (min-width:996px) and (max-width:1279px){html {font-size: 50%;}}
+@media (min-width:1280px){html {font-size: 62.5%;}}
+
+
 body{
 	margin : 0;
 }
@@ -17,6 +26,7 @@ body{
 	padding : 0;
 	overflow: hidden;
 }
+
 #center{
 	position : relative;
 	background-color: #1a1f26;

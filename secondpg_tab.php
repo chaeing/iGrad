@@ -30,7 +30,7 @@
 		<div>
         	<form role="search" method="get" class="search-form" action="">
     			<label>
-    				<input type="search" class="search-field" placeholder="Search">
+    				<input type="search" class="search-field" name="searchword" placeholder="Search">
     			</label>
 
     			<input type="submit" class="search-submit" value="Search">
