@@ -30,7 +30,7 @@
     position: relative;
     display: inline-block;
     overflow : hidden;
-    cursor: pointer;
+    cursor: default;
     font-size: 15px;
     width :100%;
     height : 100%;
@@ -67,20 +67,26 @@
 
 #container1{
     margin-right : 8%;
+    cursor : pointer;
 }
 #container2{
     margin-left : 8%;
+    cursor: default !important;
+
 }
 #container3{
     margin-right : 2.5%;
     margin-left : 5%;
+    cursor : pointer;
 }
 #container4{
     margin-left : 2.5%;
     margin-right : 2.5%;
+    cursor : pointer;
 }
 #container5{
     margin-left : 2.5%;
+    cursor : pointer;
 }
 #container6{
     margin-left : 2%;
@@ -191,8 +197,56 @@
 }
 
 .box3{
+    padding-top : 5%;
     padding-left: 23% ;
     padding-right:23%;
-    color : 'transparent';
+}
 
+#about_container3{
+    display : none;
+}
+
+#about_container4{
+    display : none;
+}
+
+#about_container5{
+    display : none;
+}
+#specificbar{
+    position : relative;
+    display : block;
+
+    margin-top : 5rem;
+}
+
+.barname{
+    float : left;
+    color : white;
+
+}
+
+
+.progressbar_text{
+    position : absolute;
+    display : block;
+}
+
+#ment_3{
+    color : white;
+    float : left;
+    padding-left: 23%;
+    padding-top : 5rem;
+}
+#ment_4{
+    color : white;
+    float : left;
+    padding-left: 23%;
+    padding-top : 5rem;
+}
+#ment_5{
+    color : white;
+    float : left;
+    padding-left: 23%;
+    padding-top : 5rem;
 }

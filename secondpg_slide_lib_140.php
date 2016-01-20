@@ -22,15 +22,19 @@
         $base5=36;
 
 
-        $bar1=10;
-        $bar2=20;
-        $bar3=30;
-        $bar4=40;
+    //  container3의 막대바
+        $bar3_1=10;
+        $bar3_2=20;
 
-        $bar1_b=30;
-        $bar2_b=20;
-        $bar3_b=40;
-        $bar4_b=40;
+        $bar3_1_b=30;
+        $bar3_2_b=20;
+
+    //  container5의 막대바
+        $bar5_1=1;
+        $bar5_2=15;
+
+        $bar5_1_b=30;
+        $bar5_2_b=20;
 
      ?>
 
@@ -50,15 +54,17 @@
     <input type="hidden" id="b4" value="<?=$base4?>" />
     <input type="hidden" id="b5" value="<?=$base5?>" />
 
-    <input type="hidden" id="tb1" value="<?=$bar1?>" />
-    <input type="hidden" id="tb2" value="<?=$bar2?>" />
-    <input type="hidden" id="tb3" value="<?=$bar3?>" />
-    <input type="hidden" id="tb4" value="<?=$bar4?>" />
+    <input type="hidden" id="tb3_1" value="<?=$bar3_1?>" />
+    <input type="hidden" id="tb3_2" value="<?=$bar3_2?>" />
 
-    <input type="hidden" id="bb1" value="<?=$bar1_b?>" />
-    <input type="hidden" id="bb2" value="<?=$bar2_b?>" />
-    <input type="hidden" id="bb3" value="<?=$bar3_b?>" />
-    <input type="hidden" id="bb4" value="<?=$bar4_b?>" />
+    <input type="hidden" id="bb3_1" value="<?=$bar3_1_b?>" />
+    <input type="hidden" id="bb3_2" value="<?=$bar3_2_b?>" />
+
+    <input type="hidden" id="tb5_1" value="<?=$bar5_1?>" />
+    <input type="hidden" id="tb5_2" value="<?=$bar5_2?>" />
+
+    <input type="hidden" id="bb5_1" value="<?=$bar5_1_b?>" />
+    <input type="hidden" id="bb5_2" value="<?=$bar5_2_b?>" />
 
  
 
@@ -94,33 +100,46 @@
             </div>
 
             <br/>
-        
-            <div class ="box3" id="bar1">
-                <div class="barname">채플</div>
-                <div id="progressbar1"></div>
+
+            <div id="specific_bar">
+                <div id="about_container3">
+                    <div class ="box3" id="bar1">
+                        <div class="barname">채플</div>
+                        <div id="progressbar3_1"></div>
+                    </div>
+                
+                    <div class ="box3" id="bar2">
+                        <div class="barname">공동체 리더십 훈련</div>
+                        <div id="progressbar3_2"></div>
+                    </div> 
+                </div>
+
+                <div id="about_container4">
+                    <div id="ment_4">
+                    blabalbalbalbla
+                    </div>
+
+                </div>
+
+
+                <div  id="about_container5">
+                    <div class ="box3" id="bar1">
+                        <div class="barname">5555</div>
+                        <div id="progressbar5_1"></div>
+                    </div>
+                
+                    <div class ="box3" id="bar2">
+                        <div class="barname">5555</div>
+                        <div id="progressbar5_2"></div>
+                    </div> 
+                </div>
             </div>
-        
-            <div class ="box3" id="bar2">
-                <div class="barname">공동체 리더십 훈련</div>
-                <div id="progressbar2"></div>
-            </div> 
-
-            <div class ="box3" id="bar3">
-                <div class="barname">교양독서</div>
-                <div id="progressbar3"></div>
-            </div>
-
-            <div class ="box3" id="bar4">
-                <div class="barname">한동인성교육</div>
-                <div id="progressbar4"></div>
-            </div>
-
-
-
 
 
         </div>
   </div>
+
+
 
 
 

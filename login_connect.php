@@ -65,8 +65,8 @@ class membercraHisnetValidation {
       // Create temorary file for save cookies
     $ckfile = tempnam ("/tmp", "CURLCOOKIE");
 
-    $connect = mysql_connect("localhost","root","111111") or die(mysql_error());   
-    mysql_select_db("student");
+  //  $connect = mysql_connect("localhost","root","111111") or die(mysql_error());   
+ //   mysql_select_db("student");
     // POST data form for login
     $dataopost = array (
      "Language" => "Korean",
@@ -343,7 +343,7 @@ class membercraHisnetValidation {
       }
 
 
-      mysql_close($connect);
+     // mysql_close($connect);
 
 
 
@@ -360,12 +360,12 @@ class membercraHisnetValidation {
     ?>
 
     <script type="text/javascript">
-    location.href('firstmain_140.php');
+        location.replace('firstmain_140.php');
     </script>
 
     
   <?php 
-    if(($_SESSION['major1']=='컴퓨터공학심화') && ($_SESSION['curri']==1))
+  /*  if(($_SESSION['major1']=='컴퓨터공학심화') && ($_SESSION['curri']==1))
     {
         echo <<<eot
 
@@ -478,5 +478,5 @@ eot;
 
 eot;
   }
-
+*/
 ?>

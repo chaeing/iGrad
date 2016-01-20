@@ -7,47 +7,123 @@
     src:local(※), url('/fonts/NanumBarunGothicLight.woff') format('woff');
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     margin:0;
-    font-family:'NanumBarunGothicUltraLight'
+    bottom:0;
 }
 
 .switch_container {
     margin: 0;
     width: 100%;
 }
+@media (max-width:767px){
+    .switch {
+        position: relative;
+        margin-left:auto;
+        margin-right : auto;
+        height: 2rem;
+        width: 8rem;
+        background: #323C45;
+        border-radius: .5rem;
+    }
 
-.switch {
-    position: relative;
-    margin:auto;
-    height: 3em;
-    width: 12em;
-    background: #323C45;
-    border-radius: .5em;
+    .switch-label {
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 4rem;
+        line-height: 2rem;
+        font-size: .5rem;
+        color: #c1c1c1;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .switch-selection {
+        border-radius: .5rem;
+    }
+
 }
 
+@media (min-width:768px) and (max-width:995px){
+    .switch {
+        position: relative;
+        margin:auto;
+        height: 3rem;
+        width: 12rem;
+        background: #323C45;
+        border-radius: .75rem;
+    }
+
+    .switch-label {
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 6rem;
+        line-height: 3rem;
+        font-size: .75rem;
+        color: #c1c1c1;
+        text-align: center;
+        cursor: pointer;
+
+    }
+
+    .switch-selection {
+        border-radius: .75rem;
+    }
+
+}
+
+
+@media (min-width:996px){
+    .switch {
+        position: relative;
+        margin:auto;
+        height: 4rem;
+        width: 16rem;
+        background: #323C45;
+        border-radius: 1rem;
+    }
+
+    .switch-label {
+        position: relative;
+        z-index: 2;
+        float: left;
+        width: 8rem;
+        line-height: 4rem;
+        font-size: 1rem;
+        color: #c1c1c1;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .switch-selection {
+        border-radius: 1rem;
+    }
+}
+
+
 .switch-label {
-    position: relative;
-    z-index: 2;
-    float: left;
-    width: 6em;
-    line-height: 3em;
-    font-size: 1rem;
-    color: #c1c1c1;
-    text-align: center;
-    cursor: pointer;
+    font-family:"NanumBarunGothicLight"
 }
 
 .switch-label:active {
+    font-family:"NanumBarunGothicLight";
     font-weight: bold;
 }
 
 .switch-label-off {
     align:center;
+    font-family:"NanumBarunGothicLight";
 }
 
 .switch-label-on {
     align:center;
+    font-family:"NanumBarunGothicLight";
 }
 
 .switch-input {
@@ -55,6 +131,7 @@ body {
 }
 
 .switch-input:checked + .switch-label {
+    font-family:"NanumBarunGothicLight";
     font-weight: bold;
     color: #323C45;
     -webkit-transition: 0.15s ease-out;
@@ -74,7 +151,6 @@ body {
     width: 50%;
     height: 100%;
     background: #C1C1C1;
-    border-radius: .5em;
     -webkit-transition: left 0.15s ease-out;
     -moz-transition: left 0.15s ease-out;
     -o-transition: left 0.15s ease-out;

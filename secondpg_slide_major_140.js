@@ -1,91 +1,140 @@
-    
-    var tb1=$('#tb1').val();
-    var bb1=$('#bb1').val();
+       $('#container1').click(function(){
 
-    var line1 = new ProgressBar.Line('#progressbar1', {
-        color: 'transparent',
-        trailColor: 'transparent',
-        duration: 1500,
-        strokeWidth: 1,
-        trailWidth: 1,
 
-           text: {
-            value: '0'
-    }, step: function(state, bar) {
-        bar.setText((bar.value() * bb1).toFixed(0)+"/"+bb1);
-    }
+
+        this.style.opacity="1.0";
+        this.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element1 = document.getElementById('container3');
+        element1.style.opacity = "1.0";
+        element1.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element2 = document.getElementById('container4');
+        element2.style.opacity = "1.0";
+        element2.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element3 = document.getElementById('container5');
+        element3.style.opacity = "1.0";
+        element3.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+
+        $.ajax({
+                url : "secondpg_slide_major_major_140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#alloflist").html(result);
+
+                } 
+            });  
+
 
     });
-    line1.path.setAttribute('stroke-linecap', 'round');
-    line1.animate(1.0/bb1*tb1);  // Number from 0.0 to 1.0
 
 
-    
-    var tb2=$('#tb2').val();
-    var bb2=$('#bb2').val();
 
-    var line1 = new ProgressBar.Line('#progressbar2', {
-        color: 'transparent',
-        trailColor: 'transparent',
-        duration: 1500,
-        strokeWidth: 1,
-        trailWidth: 1,
+    $('#container3').click(function(){
 
-           text: {
-            value: '0'
-    }, step: function(state, bar) {
-        bar.setText((bar.value() * bb2).toFixed(0)+"/"+bb2);
-    }
+
+        this.style.opacity="1.0";
+        this.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element1 = document.getElementById('container4');
+        element1.style.opacity = "0.3";
+        element1.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+        var element2 = document.getElementById('container5');
+        element2.style.opacity = "0.3";
+        element2.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+
+        var bar = document.getElementById('about_container3');
+        bar.style.display ='block';
+
+
+        $.ajax({
+                url : "secondpg_slide_major_1_140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#alloflist").html(result);
+
+
+                } 
+            });  
+
 
     });
-    line1.path.setAttribute('stroke-linecap', 'round');
-    line1.animate(1.0/bb2*tb2);  // Number from 0.0 to 1.0
-
-
     
-    var tb3=$('#tb3').val();
-    var bb3=$('#bb3').val();
 
-    var line1 = new ProgressBar.Line('#progressbar3', {
-        color: 'transparent',
-        trailColor: 'transparent',
-        duration: 1500,
-        strokeWidth: 1,
-        trailWidth: 1,
+        $('#container4').click(function(){
 
-           text: {
-            value: '0'
-    }, step: function(state, bar) {
-        bar.setText((bar.value() * bb3).toFixed(0)+"/"+bb3);
-    }
+ 
+
+        this.style.opacity="1.0";
+        this.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element1 = document.getElementById('container3');
+        element1.style.opacity = "0.3";
+        element1.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+        var element2 = document.getElementById('container5');
+        element2.style.opacity = "0.3";
+        element2.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+        var bar = document.getElementById('about_container4');
+        bar.style.display ='visible';
+
+      $.ajax({
+                url : "secondpg_slide_major_2_140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#alloflist").html(result);
+
+
+                } 
+            });  
+
 
     });
-    line1.path.setAttribute('stroke-linecap', 'round');
-    line1.animate(1.0/bb3*tb3);  // Number from 0.0 to 1.0
 
 
 
+    $('#container5').click(function(){
 
-    
-    var tb4=$('#tb4').val();
-    var bb4=$('#bb4').val();
 
-    var line1 = new ProgressBar.Line('#progressbar4', {
-        color: 'transparent',
-        trailColor: 'transparent',
-        duration: 1500,
-        strokeWidth: 1,
-        trailWidth: 1,
+        
+        this.style.opacity="1.0";
+        this.style.filter  = 'alpha(opacity=100)'; // IE fallback
 
-           text: {
-            value: '0'
-    }, step: function(state, bar) {
-        bar.setText((bar.value() * bb4).toFixed(0)+"/"+bb4);
-    }
+        var element1 = document.getElementById('container3');
+        element1.style.opacity = "0.3";
+        element1.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+        var element2 = document.getElementById('container4');
+        element2.style.opacity = "0.3";
+        element2.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+
+        var bar = document.getElementById('about_container5');
+        bar.style.display ='block';
+
+
+
 
     });
-    line1.path.setAttribute('stroke-linecap', 'round');
-    line1.animate(1.0/bb4*tb4);  // Number from 0.0 to 1.0
+
+    
+
+
+
 
 
 
@@ -214,63 +263,4 @@
     circle5.path.setAttribute('stroke-linecap', 'round');
     circle5.animate(1/base5*target5);
 
-
-
-
-    var target3_up=$('#t3').val();
-    var base3=$('#b3').val();
-
-    var circle3 = new ProgressBar.Circle('#compo3_up', { //노랑
-        color: 'blue',
-        strokeWidth: 9,
-        trailWidth: 9,
-        trailColor: 'transparent',
-        duration: 1500,
-
-
-    });
-    circle3.path.setAttribute('stroke-linecap', 'round');
-    circle3.animate(1/base3*target3_up);
-
-
-  
-
-    var target4_up=$('#t4').val();
-    var base4=$('#b4').val();
-
-    var circle4 = new ProgressBar.Circle('#compo4_up', { //노랑
-        color: 'blue',
-        strokeWidth: 10,
-        trailWidth: 10,
-        trailColor: 'transparent',
-        duration: 1500,
-
-
-
-    });
-    circle4.path.setAttribute('stroke-linecap', 'round');
-    circle4.animate(1/base4*target4_up);
-
-
-
-    var target5_up=$('#t5').val();
-    var base5=$('#b5').val();
-
-    var circle5 = new ProgressBar.Circle('#compo5_up', { //노랑
-        color: 'transparent',
-        strokeWidth: 10,
-        trailWidth: 10,
-        trailColor: 'transparent',
-        duration: 1500,
-
-        text: {
-            value: '0'
-    },
-    step: function(state, bar) {
-        bar.setText((bar.value() * base5).toFixed(0));
-    }
-
-    });
-    circle5.path.setAttribute('stroke-linecap', 'round');
-    circle5.animate(1/base5*target5_up);
 

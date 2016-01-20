@@ -3,8 +3,8 @@
     <meta http-ｅquiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="secondpg_slide_major_140.css">
-	<!-- 부트스트랩 -->
-	<link href="/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 부트스트랩 -->
+    <link href="/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     
  
@@ -22,15 +22,19 @@
         $base5=36;
 
 
-        $bar1=10;
-        $bar2=20;
-        $bar3=30;
-        $bar4=40;
+    //  container3의 막대바
+        $bar3_1=10;
+        $bar3_2=20;
 
-        $bar1_b=30;
-        $bar2_b=20;
-        $bar3_b=40;
-        $bar4_b=40;
+        $bar3_1_b=30;
+        $bar3_2_b=20;
+
+    //  container5의 막대바
+        $bar5_1=1;
+        $bar5_2=15;
+
+        $bar5_1_b=30;
+        $bar5_2_b=20;
 
      ?>
 
@@ -50,15 +54,17 @@
     <input type="hidden" id="b4" value="<?=$base4?>" />
     <input type="hidden" id="b5" value="<?=$base5?>" />
 
-    <input type="hidden" id="tb1" value="<?=$bar1?>" />
-    <input type="hidden" id="tb2" value="<?=$bar2?>" />
-    <input type="hidden" id="tb3" value="<?=$bar3?>" />
-    <input type="hidden" id="tb4" value="<?=$bar4?>" />
+    <input type="hidden" id="tb3_1" value="<?=$bar3_1?>" />
+    <input type="hidden" id="tb3_2" value="<?=$bar3_2?>" />
 
-    <input type="hidden" id="bb1" value="<?=$bar1_b?>" />
-    <input type="hidden" id="bb2" value="<?=$bar2_b?>" />
-    <input type="hidden" id="bb3" value="<?=$bar3_b?>" />
-    <input type="hidden" id="bb4" value="<?=$bar4_b?>" />
+    <input type="hidden" id="bb3_1" value="<?=$bar3_1_b?>" />
+    <input type="hidden" id="bb3_2" value="<?=$bar3_2_b?>" />
+
+    <input type="hidden" id="tb5_1" value="<?=$bar5_1?>" />
+    <input type="hidden" id="tb5_2" value="<?=$bar5_2?>" />
+
+    <input type="hidden" id="bb5_1" value="<?=$bar5_1_b?>" />
+    <input type="hidden" id="bb5_2" value="<?=$bar5_2_b?>" />
 
  
 
@@ -70,7 +76,7 @@
             </div>
 
              <div class="box1" id="container2">
-                <div class="nadef" id="name2">실무</div>
+                <div class="nadef" id="name2">,</div>
                 <div id="compo2">  </div>
             </div>
             
@@ -79,67 +85,58 @@
 
 
             <div class="box2" id="container3">
-                <div class="na" id="name3">전공1</div>
+                <div class="na" id="name3">1전공</div>
                 <div id="compo3"  >  </div>
-
-
-                <div class="box2_up" id="container3_up">
-                    <div id="compo3_up"  >  </div>
-                </div>
-
             </div>
             
             <div class="box2" id="container4">
-                <div class="na" id="name4">전공2</div>
+                <div class="na" id="name4">2전공</div>
                 <div id="compo4"  >  </div>
-
-
-                <div class="box2_up" id="container4_up">
-                    <div id="compo4_up"  >  </div>
-                </div>
-
             </div>
 
             <div class="box2" id="container5">
-                <div class="nadef" id="name5">기초학문</div>
+                <div class="nadef" id="name5">한문/중국어</div>
                 <div id="compo5"  >  </div>
             </div>
 
-
-
             <br/>
 
-            
-            
+            <div id="specific_bar">
+                <div id="notice">
+                     <div id="ment_notice">
+                    blabalbal3333a
+                    </div>
 
-            <div class="box2_up" id="container5_up">
-                <div class="nadef" id="name5">기초학문</div>
-                <div id="compo5_up"  >  </div>
+                </div>
+
+                <div id="about_container3">
+                     <div id="ment_3">
+                    
+                    </div>
+
+                </div>
+
+                <div id="about_container4">
+                    <div id="ment_4">
+                    
+                    </div>
+
+                </div>
+
+
+                <div  id="about_container5">
+                     <div id="ment_5">
+                    
+                    </div>
+
+                </div>
             </div>
-
-
-            <div class ="box3" id="bar1">
-                <div id="progressbar1"></div>
-            </div>
-        
-            <div class ="box3" id="bar2">
-                <div id="progressbar2"></div>
-            </div> 
-
-            <div class ="box3" id="bar3">
-                <div id="progressbar3"></div>
-            </div>
-
-            <div class ="box3" id="bar4">
-                <div id="progressbar4"></div>
-            </div>
-
-
-
 
 
         </div>
   </div>
+
+
 
 
 

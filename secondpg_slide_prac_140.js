@@ -1,91 +1,170 @@
-    
-    var tb1=$('#tb1').val();
-    var bb1=$('#bb1').val();
+       $('#container1').click(function(){
 
-    var line1 = new ProgressBar.Line('#progressbar1', {
-        color: 'transparent',
-        trailColor: 'transparent',
-        duration: 1500,
-        strokeWidth: 1,
-        trailWidth: 1,
+        var allbar1 = document.getElementById('about_container3');
+        var allbar2 = document.getElementById('about_container5');
+        var allbar3 = document.getElementById('about_container4');
+        allbar1.style.display='none';
+        allbar2.style.display='none';
+        allbar3.style.display='none';
 
-           text: {
-            value: '0'
-    }, step: function(state, bar) {
-        bar.setText((bar.value() * bb1).toFixed(0)+"/"+bb1);
-    }
+        this.style.opacity="1.0";
+        this.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element1 = document.getElementById('container3');
+        element1.style.opacity = "1.0";
+        element1.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element2 = document.getElementById('container4');
+        element2.style.opacity = "1.0";
+        element2.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element3 = document.getElementById('container5');
+        element3.style.opacity = "1.0";
+        element3.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+
+        $.ajax({
+                url : "secondpg_slide_prac_prac_140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#alloflist").html(result);
+
+                } 
+            });  
+
 
     });
-    line1.path.setAttribute('stroke-linecap', 'round');
-    line1.animate(1.0/bb1*tb1);  // Number from 0.0 to 1.0
 
 
-    
-    var tb2=$('#tb2').val();
-    var bb2=$('#bb2').val();
 
-    var line1 = new ProgressBar.Line('#progressbar2', {
-        color: 'transparent',
-        trailColor: 'transparent',
-        duration: 1500,
-        strokeWidth: 1,
-        trailWidth: 1,
+    $('#container3').click(function(){
 
-           text: {
-            value: '0'
-    }, step: function(state, bar) {
-        bar.setText((bar.value() * bb2).toFixed(0)+"/"+bb2);
-    }
+        var allbar1 = document.getElementById('about_container3');
+        var allbar2 = document.getElementById('about_container5');
+        var allbar3 = document.getElementById('about_container4');
+        allbar1.style.display='none';
+        allbar2.style.display='none';
+        allbar3.style.display='none';
+
+        this.style.opacity="1.0";
+        this.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element1 = document.getElementById('container4');
+        element1.style.opacity = "0.3";
+        element1.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+        var element2 = document.getElementById('container5');
+        element2.style.opacity = "0.3";
+        element2.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+
+        var bar = document.getElementById('about_container3');
+        bar.style.display ='block';
+
+
+        $.ajax({
+                url : "secondpg_slide_prac_compu_140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#alloflist").html(result);
+
+
+                } 
+            });  
+
 
     });
-    line1.path.setAttribute('stroke-linecap', 'round');
-    line1.animate(1.0/bb2*tb2);  // Number from 0.0 to 1.0
+
+        $('#container4').click(function(){
+
+        var allbar1 = document.getElementById('about_container3');
+        var allbar2 = document.getElementById('about_container5');
+        var allbar3 = document.getElementById('about_container4');
+        allbar1.style.display='none';
+        allbar2.style.display='none';
+        allbar3.style.display='none';
+
+        this.style.opacity="1.0";
+        this.style.filter  = 'alpha(opacity=100)'; // IE fallback
+
+        var element1 = document.getElementById('container3');
+        element1.style.opacity = "0.3";
+        element1.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+        var element2 = document.getElementById('container5');
+        element2.style.opacity = "0.3";
+        element2.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+        var bar = document.getElementById('about_container4');
+        bar.style.display ='block';
+
+      $.ajax({
+                url : "secondpg_slide_prac_eng_140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#alloflist").html(result);
 
 
-    
-    var tb3=$('#tb3').val();
-    var bb3=$('#bb3').val();
+                } 
+            });  
 
-    var line1 = new ProgressBar.Line('#progressbar3', {
-        color: 'transparent',
-        trailColor: 'transparent',
-        duration: 1500,
-        strokeWidth: 1,
-        trailWidth: 1,
-
-           text: {
-            value: '0'
-    }, step: function(state, bar) {
-        bar.setText((bar.value() * bb3).toFixed(0)+"/"+bb3);
-    }
 
     });
-    line1.path.setAttribute('stroke-linecap', 'round');
-    line1.animate(1.0/bb3*tb3);  // Number from 0.0 to 1.0
 
 
 
+    $('#container5').click(function(){
 
-    
-    var tb4=$('#tb4').val();
-    var bb4=$('#bb4').val();
+        var allbar1 = document.getElementById('about_container3');
+        var allbar2 = document.getElementById('about_container5');
+        var allbar3 = document.getElementById('about_container4');
+        allbar1.style.display='none';
+        allbar2.style.display='none';
+        allbar3.style.display='none';
+        
+        this.style.opacity="1.0";
+        this.style.filter  = 'alpha(opacity=100)'; // IE fallback
 
-    var line1 = new ProgressBar.Line('#progressbar4', {
-        color: 'transparent',
-        trailColor: 'transparent',
-        duration: 1500,
-        strokeWidth: 1,
-        trailWidth: 1,
+        var element1 = document.getElementById('container3');
+        element1.style.opacity = "0.3";
+        element1.style.filter  = 'alpha(opacity=30)'; // IE fallback
 
-           text: {
-            value: '0'
-    }, step: function(state, bar) {
-        bar.setText((bar.value() * bb4).toFixed(0)+"/"+bb4);
-    }
+        var element2 = document.getElementById('container4');
+        element2.style.opacity = "0.3";
+        element2.style.filter  = 'alpha(opacity=30)'; // IE fallback
+
+
+        var bar = document.getElementById('about_container5');
+        bar.style.display ='block';
+
+
+      $.ajax({
+                url : "secondpg_slide_prac_china_140.php",
+                dataType : "html",
+                async : false,
+                type : "post",  // post 또는 get
+                success : function(result){
+
+                $("#alloflist").html(result);
+
+                } 
+            });  
+
 
     });
-    line1.path.setAttribute('stroke-linecap', 'round');
-    line1.animate(1.0/bb4*tb4);  // Number from 0.0 to 1.0
+
+    
+
+
 
 
 
@@ -197,7 +276,7 @@
     var base5=$('#b5').val();
 
     var circle5 = new ProgressBar.Circle('#compo5', { //노랑
-        color: '#Ff0066',
+        color: 'yellow',
         strokeWidth: 10,
         trailWidth: 10,
         trailColor: '#B4B4DC',

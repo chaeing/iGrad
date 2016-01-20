@@ -1,20 +1,21 @@
 
 <!-- 부트스트랩 -->
-<link href="/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-<link rel="stylesheet" type="text/css" href="secondpg_140.css">
-
+<head>
+    <link href="/library/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="secondpg_140.css">
+    <link rel="stylesheet" type="text/css" href="secondpg_table.css">
+</head>
 
 
 
 
 <div class="row">
   
-  <div class="col-md-12 upper">
-    <?php include "mainupper.php"; ?>
-  </div>
+    <div class="col-md-12 upper">
+        <?php include "mainupper.php"; ?>
+    </div>
 
-  <div class="col-md-12 mainframe">
+    <div class="col-md-12 mainframe">
 
         <div class="col-md-12 widecenter">
 
@@ -43,7 +44,7 @@
              
         </div>
   
-  </div>
+    </div>
   
 </div>
 
