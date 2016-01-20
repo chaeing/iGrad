@@ -25,7 +25,7 @@
       <th class="cre">학점</th>
       <th class="eng">영어</th>
       <th class="par">영역</th>
-      <th class="etc">담기</th>
+      <th class="etc">빼기버튼</th>
     </tr>
     <tr class="hov">
       <th class="cod">과목코드</th>
