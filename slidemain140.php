@@ -7,16 +7,21 @@
     
  
     <?php 
-        $target1=1;
-        $target2=2;
-        $target3=3;
-        $target4=4;
-        $target5=5;
-        $target6=$target1+$target2+$target3+$target4+$target5;
 
-        $base1=24;
-        $base2=36;
-        $base3=45;
+        session_start();
+
+        require_once('140_eng_total_score.php');
+
+        $target1=$_SESSION['lib_total'];
+        $target2=$_SESSION['prac_total'];
+        $target3=$_SESSION['maj_total'];
+        $target4=$_SESSION['eng_total'];
+        $target5=5;
+        $target6=$_SESSION['total'];
+
+        $base1=40;
+        $base2=20;
+        $base3=66;
         $base4=24;
         $base5=36;
         $base6=140;
@@ -91,4 +96,4 @@
 
     <script type="text/javascript" src="/library/progressbar.js-master/dist/progressbar.js">//circlebar </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    <script src="slidemain.js">//page transition </script> 
+    <script src="slidemain140.js">//page transition </script> 

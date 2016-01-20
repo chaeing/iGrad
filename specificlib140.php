@@ -9,26 +9,36 @@
     
  
     <?php 
-        $target1=10;
+
+        session_start();
+
+        $connect = mysql_connect("localhost","root","111111") or die(mysql_error());
+        mysql_select_db("student");
+
+        require_once('140_lib_religion_score.php');
+        require_once('140_lib_char_score.php');
+        require_once('140_lib_basic_score.php');
+
+        $target1=$_SESSION['lib_total'];
         $target2=15;
-        $target3=20;
-        $target4=10;
-        $target5=15;
+        $target3=$_SESSION['lib_religion'];
+        $target4=$_SESSION['lib_char'];
+        $target5=$_SESSION['lib_basic'];
 
-        $base1=24;
+        $base1=40;
         $base2=36;
-        $base3=45;
-        $base4=24;
-        $base5=36;
+        $base3=9;
+        $base4=10;
+        $base5=9;
 
 
-        $bar1=10;
-        $bar2=20;
+        $bar1=$_SESSION['lib_religion2'];
+        $bar2=$_SESSION['lib_worldview'];
         $bar3=30;
         $bar4=40;
 
-        $bar1_b=30;
-        $bar2_b=20;
+        $bar1_b=4;
+        $bar2_b=2;
         $bar3_b=40;
         $bar4_b=40;
 
@@ -70,7 +80,7 @@
             </div>
 
              <div class="box1" id="container2">
-                <div class="nadef" id="name2">실무</div>
+                <div class="nadef" id="name2"></div>
                 <div id="compo2">  </div>
             </div>
             
@@ -96,22 +106,22 @@
             <br/>
         
             <div class ="box3" id="bar1">
-                <div class="barname">채플</div>
+                <div class="barname">신앙2</div>
                 <div id="progressbar1"></div>
             </div>
         
             <div class ="box3" id="bar2">
-                <div class="barname">공동체 리더십 훈련</div>
+                <div class="barname">세계관1</div>
                 <div id="progressbar2"></div>
             </div> 
 
             <div class ="box3" id="bar3">
-                <div class="barname">교양독서</div>
+                <div class="barname"></div>
                 <div id="progressbar3"></div>
             </div>
 
             <div class ="box3" id="bar4">
-                <div class="barname">한동인성교육</div>
+                <div class="barname"></div>
                 <div id="progressbar4"></div>
             </div>
 

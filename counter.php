@@ -7,6 +7,8 @@
  
     <?php 
 
+        session_start();
+
         $c_id=$_SESSION['his_id'];
         $_SESSION['total']=0;
 

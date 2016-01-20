@@ -1,17 +1,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <?php
-    
-    session_start();
 
     $c_id=$_SESSION['his_id']; // 현재 로그인 아이디
     $c_first=$_SESSION['major1']; // 1전공 겁색용 변수
     $c_second=$_SESSION['major2']; // 2전공 검색용 변수
     $c_curri=$_SESSION['curri']; // 교육과정 선택용 변수
     $var=$_POST['section']; //전달 받은 선택 값
-
-    $connect = mysql_connect("localhost","root","111111") or die(mysql_error());
-    mysql_select_db("student");
     
     $re="SELECT code,name,credit,english,section,detail
         FROM 140lib
@@ -35,7 +30,5 @@
     {
         $_SESSION['lib_char']+=$result[2];
     }
-
-    mysql_close($connect);
 
 ?>

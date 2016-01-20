@@ -78,7 +78,6 @@
         $base2=20;
         $base3=66;
 
-        mysql_close($connect);
      ?>
 
 

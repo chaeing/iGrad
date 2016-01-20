@@ -1,8 +1,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <?php
-    
-    session_start();
 
     $c_id=$_SESSION['his_id']; // 현재 로그인 아이디
     $c_first=$_SESSION['major1']; // 1전공 겁색용 변수
@@ -125,7 +123,5 @@
         }   
         $_SESSION['eng_total']+=$result[2]; 
     }
-
-    mysql_close($connect);
 
 ?>

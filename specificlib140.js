@@ -47,8 +47,8 @@
     var bb3=$('#bb3').val();
 
     var line1 = new ProgressBar.Line('#progressbar3', {
-        color: '#FCB03C',
-        trailColor: '#B4B4DC',
+        color: 'transparent',
+        trailColor: 'transparent',
         duration: 1500,
         strokeWidth: 1,
         trailWidth: 1,
@@ -71,8 +71,8 @@
     var bb4=$('#bb4').val();
 
     var line1 = new ProgressBar.Line('#progressbar4', {
-        color: '#FCB03C',
-        trailColor: '#B4B4DC',
+        color: 'transparent',
+        trailColor: 'transparent',
         duration: 1500,
         strokeWidth: 1,
         trailWidth: 1,
@@ -197,7 +197,7 @@
     var base5=$('#b5').val();
 
     var circle5 = new ProgressBar.Circle('#compo5', { //노랑
-        color: 'yellow',
+        color: '#Ff0066',
         strokeWidth: 10,
         trailWidth: 10,
         trailColor: '#B4B4DC',
@@ -207,7 +207,7 @@
             value: '0'
     },
     step: function(state, bar) {
-        bar.setText((bar.value() * base5).toFixed(0));
+        bar.setText((bar.value() * base5).toFixed(0)+"/"+base5);
     }
 
     });

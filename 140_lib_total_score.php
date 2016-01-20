@@ -3,8 +3,6 @@
 <?php
 
     $c_id=$_SESSION['his_id']; // 현재 로그인 아이디
-
-    $c_id=$_SESSION['his_id']; // 현재 로그인 아이디
     $c_first=$_SESSION['major1']; // 1전공 겁색용 변수
     $c_second=$_SESSION['major2']; // 2전공 검색용 변수
     $c_curri=$_SESSION['curri']; // 교육과정 선택용 변수
