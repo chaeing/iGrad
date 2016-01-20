@@ -1,0 +1,82 @@
+@font-face{
+    font-family:"NanumBarunGothicLight";
+    src:url('/fonts/NanumBarunGothicLight.eot');
+    src:url('/fonts/NanumBarunGothicLight.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/NanumBarunGothicLight.woff') format('woff'),
+    url('/fonts/NanumBarunGothicLight.ttf') format('truetype');
+    src:local(※), url('/fonts/NanumBarunGothicLight.woff') format('woff');
+}
+
+body {
+    margin:0;
+    font-family:'NanumBarunGothicUltraLight'
+}
+
+.switch_container {
+    margin: 0;
+    width: 100%;
+}
+
+.switch {
+    position: relative;
+    margin:auto;
+    height: 3em;
+    width: 12em;
+    background: #323C45;
+    border-radius: .5em;
+}
+
+.switch-label {
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 6em;
+    line-height: 3em;
+    font-size: 1rem;
+    color: #c1c1c1;
+    text-align: center;
+    cursor: pointer;
+}
+
+.switch-label:active {
+    font-weight: bold;
+}
+
+.switch-label-off {
+    align:center;
+}
+
+.switch-label-on {
+    align:center;
+}
+
+.switch-input {
+   display: none;
+}
+
+.switch-input:checked + .switch-label {
+    font-weight: bold;
+    color: #323C45;
+    -webkit-transition: 0.15s ease-out;
+    -moz-transition: 0.15s ease-out;
+    -o-transition: 0.15s ease-out;
+    transition: 0.15s ease-out;
+}
+
+.switch-input:checked + .switch-label-on ~ .switch-selection {
+    left: 50%;
+}
+
+.switch-selection {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 50%;
+    height: 100%;
+    background: #C1C1C1;
+    border-radius: .5em;
+    -webkit-transition: left 0.15s ease-out;
+    -moz-transition: left 0.15s ease-out;
+    -o-transition: left 0.15s ease-out;
+    transition: left 0.15s ease-out;
+}

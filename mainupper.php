@@ -15,7 +15,7 @@
 	    	<div class="col-md-12" id="logobg">
 
 		 		<div id = "main_icon"  class="col-md-2 col-md-offset-5">
-				  <a href="firstmain140.php"><img id = "main_iconimg" src ="/img/igrad.png" ></a>
+				  <a href="firstmain_140.php"><img id = "main_iconimg" src ="/img/igrad.png" ></a>
 				</div>
 
 				<div class="col-md-5" id="logout">

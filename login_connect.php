@@ -34,10 +34,8 @@ class membercraHisnetValidation {
    var $his_id = null;
    //hisnet pw
    var $his_pw = null;
-   //교직원 여부
-   var $is_faculty = null;
 
-   var $is_login_successed = false;
+
 
    /**
     * @function membercraHisValidation
@@ -48,7 +46,6 @@ class membercraHisnetValidation {
 
       $this->his_id = $his_id;
       $this->his_pw = $his_pw;
-      $this->is_faculty = $is_faculty;
 
       // 히즈넷에 요청을 보내서 올바른 사람인지 확인한다.
       $this->requestHisnet();
@@ -62,14 +59,14 @@ class membercraHisnetValidation {
     * 주의할 점은 /login.asp 와 /goMenu_eval.asp 그리고 /main.asp 3곳에 요청을 다 보내야 한다. (2012년 1월 31일 기준.)
     * 만약 히즈넷의 로그인 알고리즘이 바뀌면 이 부분을 수정해 주어야 한다.
     **/
+
   function requestHisnet() {
     include 'simple_html_dom.php';
-
-    $connect = mysql_connect("localhost","root","111111") or die(mysql_error());   
-    mysql_select_db("student");
       // Create temorary file for save cookies
     $ckfile = tempnam ("/tmp", "CURLCOOKIE");
 
+    $connect = mysql_connect("localhost","root","111111") or die(mysql_error());   
+    mysql_select_db("student");
     // POST data form for login
     $dataopost = array (
      "Language" => "Korean",
@@ -173,7 +170,6 @@ class membercraHisnetValidation {
       $stu_major1 = iconv("EUC-KR","UTF-8", $stu_major1);
       $stu_major1=strip_tags($stu_major1);
       $pos=strpos($stu_major1,".");
-      // echo "pos : ".$pos. "major_len : ".strlen($stu_major1);
 
 
 
@@ -253,14 +249,13 @@ class membercraHisnetValidation {
 
         //학년별 (년도 구하기)
         $c_year = $html->find('table[id=att_list1]', 0)->children(0)->children(2)->children(0)->children($i)->innertext;
-        // echo $c_year." ";
+
         if($i==1)
         {
           $_SESSION['inyear']=$c_year;
         }
 
         for($j=1;$j<=4;$j++){
-        //echo "http://hisnet.handong.edu/haksa/lecture/HLEC110M.php?hak_year=".$year."&hak_term=".$j;
           $ch = curl_init ("http://hisnet.handong.edu/haksa/lecture/HLEC110M.php?hak_year=".$c_year."&hak_term=".$j);
           curl_setopt ($ch, CURLOPT_RETURNTRANSFER, true);
           curl_setopt ($ch, CURLOPT_COOKIEFILE, $ckfile);
@@ -269,7 +264,6 @@ class membercraHisnetValidation {
 
           $result = iconv("EUC-KR","UTF-8", $result);
 
-          // echo $j." ";
 
           $html = str_get_html($result);
         
@@ -281,35 +275,27 @@ class membercraHisnetValidation {
 
             $c_code = $html->find('table[id=att_list]',0)->children($k)->children(1)->innertext;
             $c_code=strip_tags($c_code);
-            // echo $c_code." " ;
 
             $c_name = $html->find('table[id=att_list]',0)->children($k)->children(2)->innertext;
             $c_name=strip_tags($c_name);
-            // echo $c_name." ";
 
             $c_english = $html->find('table[id=att_list]',0)->children($k)->children(3)->innertext;
             $c_english=strip_tags($c_english);
-            //$position=strpos($c_english,"%");
-            //$c_english=substr($c_english,0,$position);
-            // echo $c_english."  ";
 
             $c_credit = $html->find('table[id=att_list]',0)->children($k)->children(4)->innertext;
             $c_credit=strip_tags($c_credit);
-            // echo $c_credit." ";
 
             // $c_prof = $html->find('table[id=att_list]',0)->children($k)->children(6)->innertext;
             // $c_prof=strip_tags($c_prof);
             // $c_prof= preg_replace('/^(&nbsp;)+/', '', $c_prof);   //&nbsp제거 정규식
-            // // echo $c_prof." ";
 
             $c_retake = $html->find('table[id=att_list]',0)->children($k)->children(9)->innertext;
             $c_retake=strip_tags($c_retake);
-            // echo $c_retake." ";
 
-            $query = "INSERT into stuinfo(id,first,second,curri,year,semester,code,name,credit,english,retake) 
-            values('$c_id','$c_first','$c_second','$c_curri','$c_year','$j','$c_code','$c_name','$c_credit','$c_english','$c_retake')";
+         //   $query = "INSERT into stuinfo(id,first,second,curri,year,semester,code,name,credit,english,retake) 
+          //  values('$c_id','$c_first','$c_second','$c_curri','$c_year','$j','$c_code','$c_name','$c_credit','$c_english','$c_retake')";
 // '$_SESSION['.'major1]','$_SESSION['.'major2]','$_SESSION['.'curri]'
-            mysql_query($query,$connect);
+        //    mysql_query($query,$connect);
           }
         }
       }
@@ -350,14 +336,147 @@ class membercraHisnetValidation {
 
           $c_inyear=$_SESSION['inyear'];
 
-          $query = "INSERT into stuinfo(id,first,second,curri,year,semester,code,name,credit,english,retake) values('$c_id','$c_first','$c_second','$c_curri','$c_inyear',0,'$c_code','$c_name','$c_credit','100%','&nbsp')";
-          mysql_query($query,$connect);
-        }            
+      //    $query = "INSERT into stuinfo(id,first,second,curri,year,semester,code,name,credit,english,retake) values('$c_id','$c_first','$c_second','$c_curri','$c_inyear',0,'$c_code','$c_name','$c_credit','100%','&nbsp')";
+       //   mysql_query($query,$connect);
+        }   
+        
       }
+
+
       mysql_close($connect);
+
+
+
+    
+
   }
+
+   /**
+    * @function parseResponse
+    * @brief 요청 결과를 해석해서 사용자 정보를 클래스 프로퍼티에 넣는다
+    * @param HTTP response $res
+    */
 }
-  
-  require_once('firstmain.php');
+    ?>
+
+    <script type="text/javascript">
+    location.href('firstmain_140.php');
+    </script>
+
+    
+  <?php 
+    if(($_SESSION['major1']=='컴퓨터공학심화') && ($_SESSION['curri']==1))
+    {
+        echo <<<eot
+
+        <A HREF="selection2.php?choice=0">130학점으로 보기</A>
+
+        <form method="POST" action="firstmain3.php">
+        <input type="hidden" name="section" value="1">
+        <input type="submit" value="교양">  
+        </form>
+
+        <form method="POST" action="firstmain3.php">
+        <input type="hidden" name="section" value="2">
+        <input type="submit" value="실무">  
+        </form>
+
+        <form method="POST" action="firstmain3.php">
+        <input type="hidden" name="section" value="3">
+        <input type="submit" value="전공">
+        </form>
+
+        <form method="POST" action="firstmain3.php">
+        <input type="hidden" name="section" value="9">
+        <input type="submit" value="영어">
+        </form>
+
+        <form method="POST" action="firstmain3.php">
+        <input type="hidden" name="section" value="12">
+        <input type="submit" value="공학인증">
+        </form>
+eot;
+    }
+    
+  if(($_SESSION['major1']=='컴퓨터공학심화') && ($_SESSION['curri']==0)) // 130학점인 경우
+  {
+    echo <<<eot
+
+        <A HREF="selection2.php?choice=1">140학점으로 보기</A>
+
+        <form method="POST" action="firstmain4.php">
+        <input type="hidden" name="section" value="1">
+        <input type="submit" value="교양">  
+        </form>
+
+        <form method="POST" action="firstmain4.php">
+        <input type="hidden" name="section" value="2">
+        <input type="submit" value="전공">
+        </form>
+
+        <form method="POST" action="firstmain4.php">
+        <input type="hidden" name="section" value="3">
+        <input type="submit" value="영어">
+        </form>
+
+        <form method="POST" action="firstmain4.php">
+        <input type="hidden" name="section" value="9">
+        <input type="submit" value="공학인증">
+        </form>
+eot;
+  }
+
+    if(($_SESSION['major1']!='컴퓨터공학심화') && ($_SESSION['curri']==1))
+    {
+        echo <<<eot
+
+        <A HREF="selection.php?choice=0">130학점으로 보기</A>
+
+        <form method="POST" action="firstmain.php">
+        <input type="hidden" name="section" value="1">
+        <input type="submit" value="교양">  
+        </form>
+
+        <form method="POST" action="firstmain.php">
+        <input type="hidden" name="section" value="2">
+        <input type="submit" value="실무">  
+        </form>
+
+        <form method="POST" action="firstmain.php">
+        <input type="hidden" name="section" value="3">
+        <input type="submit" value="전공">
+        </form>
+
+        <form method="POST" action="firstmain.php">
+        <input type="hidden" name="section" value="12">
+        <input type="submit" value="영어">
+        </form>
+
+eot;
+    }
+
+  if(($_SESSION['major1']!='컴퓨터공학심화') && ($_SESSION['curri']==0)) // 130학점인 경우
+  {
+    echo <<<eot
+
+        <A HREF="selection.php?choice=1">140학점으로 보기</A>
+
+        <form method="POST" action="firstmain2.php">
+        <input type="hidden" name="section" value="1">
+        <input type="submit" value="교양">  
+        </form>
+
+        <form method="POST" action="firstmain2.php">
+        <input type="hidden" name="section" value="2">
+        <input type="submit" value="전공">
+        </form>
+
+        <form method="POST" action="firstmain2.php">
+        <input type="hidden" name="section" value="3">
+        <input type="submit" value="영어">
+        </form>
+
+eot;
+  }
 
 ?>
