@@ -18,18 +18,16 @@
         <input type="hidden" id="eng" value="<?=$eng?>" />
         <input type="hidden" id="engbase" value="<?=$engbase?>" />
         
-
-            <div class="subgraph" id="subone" >  
-                <div class="a" id="sub"></div>
-           	</div>
+            <a href="secondpg_main_eng_140.php">
+                <div class="subgraph" id="subone" >  
+                    <div class="a" id="sub"></div>
+               	</div>
+                
+                <div class="sub_name">
+                    필수영어학점
+                </div>
+            </a>
             
-            <div class="sub_name">
-                필수영어학점
-            </div>
-
-            
-             
-
 
             <div class = "english">
                 <?php //if로 케이스 나눠서 ?>
